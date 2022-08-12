@@ -21,6 +21,10 @@ void Random(int A[], int A_Length, int Left, int Right) {             /*生成�
 }
 template<class T>
 int Partition(T A[], int L, int R) {
+	int p = rand() % (R - L + 1) + L;
+	T t1 = A[p];
+	A[p] = A[L];
+	A[L] = t1;
 	int j = L;
 	for (int i = L + 1; i <= R; i++) {
 		if (A[i] < A[L]) {
