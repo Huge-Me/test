@@ -20,7 +20,7 @@ void Random(int A[], int A_Length, int Left, int Right) {             /*生成�
 	}
 }
 template<class T>
-int Partition2(T A[], int L, int R) {
+int Partition2(T A[], int L, int R) {                 //Partition2 
 	int p = rand() % (R - L + 1) + L;
 	Swap(A, L, p);
 	int i = L + 1;
@@ -49,7 +49,7 @@ void QSort2(T A[], int l, int r) {
 	QSort2(A, p + 1, r);
 }
 template<class T>
-void QuickSort2(T A[], int Length) {
+void QuickSort2(T A[], int Length) {    //QuickSort2
 	QSort2(A, 0, Length - 1);
 }
 int main() {      //快速排序
