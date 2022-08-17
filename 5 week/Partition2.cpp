@@ -20,16 +20,23 @@ void Random(int A[], int A_Length, int Left, int Right) {             /*生成�
 	}
 }
 template<class T>
+void Swap(T A[], int i, int j) {     //交换数组元素
+	T t;
+	t = A[j];
+	A[j] = A[i];
+	A[i] = t;
+}
+template<class T>
 int Partition2(T A[], int L, int R) {                 //Partition2 
 	int p = rand() % (R - L + 1) + L;
 	Swap(A, L, p);
 	int i = L + 1;
 	int j = R;
 	while (true) {
-		while (i <= j && A[i] >= A[L]) {
+		while (i <= j && A[i] <= A[L]) {
 			i++;
 		}
-		while (j >= i && A[j] <= A[L]) {
+		while (j >= i && A[j] >= A[L]) {
 			j--;
 		}
 		if (i >= j) break;
