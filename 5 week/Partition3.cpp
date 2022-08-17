@@ -20,6 +20,13 @@ void Random(int A[], int A_Length, int Left, int Right) {             /*生成�
 	}
 }
 template<class T>
+void Swap(T A[], int i, int j) {     //交换数组元素
+	T t;
+	t = A[j];
+	A[j] = A[i];
+	A[i] = t;
+}
+template<class T>
 void QSort3(T A[], int l, int r) {
 	if (l >= r)
 		return;
